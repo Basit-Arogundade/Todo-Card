@@ -1,0 +1,55 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+.card {
+    background-color: azure;
+padding: 20px;
+width: 320px;
+border-radius: 16px;
+transition: transform 0.2s ease-in;
+margin-top: 5px;
+}
+.priority {
+display: inline-block;
+padding: 4px 10px;
+margin-bottom: 8px;
+}
+.high {
+    background-color: red;
+    border-radius: 5px;
+}
+.medium {
+    background-color: rgba(67, 67, 191, 0.887);
+    border-radius: 5px;
+}
+.low {
+    background-color: beige;
+    border-radius: 5px;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.tag{
+    display: inline-block;
+    background-color: aquamarine;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+.edit {
+    background-color: cornflowerblue;
+    border-radius: 8px;
+}
+.delete {
+    background: white;
+    color: rgb(167, 41, 41);
+    border-radius: 8px;
+    
+}
