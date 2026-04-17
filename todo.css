@@ -1,19 +1,8 @@
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
+/* body {
+   
 }
 .card {
-    background-color: azure;
-padding: 20px;
-width: 320px;
-border-radius: 16px;
-transition: transform 0.2s ease-in;
-margin-top: 5px;
+   
 }
 .priority {
 display: inline-block;
@@ -53,3 +42,118 @@ margin-bottom: 8px;
     border-radius: 8px;
     
 }
+.hidden {
+    display: none;
+  }
+  .desc {
+max-height: 50px;
+overflow: hidden;
+margin-bottom: 10px;
+  }
+  .descInput{
+    
+  }
+
+#editForm{
+    background-color: azure;
+padding: 20px;
+width: 350px;
+border-radius: 16px;
+transition: transform 0.2s ease-in;
+margin: 10px;
+}
+.low { background: green; width: 10px; height: 10px; border-radius: 50%; }
+.medium { background: orange; width: 10px; height: 10px; border-radius: 50%; }
+.high { background: red; width: 10px; height: 10px; border-radius: 50%; } */
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+  }
+  
+  .card {
+    background: azure;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    
+  }
+  
+  .top {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 6px 10px;
+    border: none;
+    background: #46a5e5;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .collapsed {
+    max-height: 60px;
+    overflow: hidden;
+  }
+  
+  .desc {
+    max-height: none;
+  }
+  
+  #descSection {
+    overflow-wrap: break-word;
+  }
+
+  #editTitle{
+    margin-top: 10px;
+  }
+  
+  textarea {
+    width: 80%;
+    min-height: 50px;
+    resize: vertical;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  
+  textarea:focus {
+    border-color: #4f46e5;
+    outline: none;
+  }
+  
+  [data-testid="test-todo-overdue-indicator"] {
+    color: red;
+    font-weight: bold;
+  }
+  .low { background: green; width: 10px; height: 10px; border-radius: 50%; }
+.medium { background: orange; width: 10px; height: 10px; border-radius: 50%; }
+.high { background: red; width: 10px; height: 10px; border-radius: 50%; }
+

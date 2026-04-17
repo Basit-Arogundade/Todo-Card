@@ -1,38 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Card</title>
-    <link rel="stylesheet" href="todo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Card</title>
+  <link rel="stylesheet" href="todo.css">
 </head>
 <body>
-    <section data-testid="test-todo-card" class="card">
-      <div>
-        <h3 data-testid="test-todo-title">Finish My Assignment
-          <input type="checkbox" data-testid="test-todo-complete-toggle" aria-label="">
-        </h3> 
-      </div>
-          <p data-testid="test-todo-description">
-            Complete my portfolio website and deploy it.
-          </p>
-          <span data-testid="test-todo-priority" class="priority high">High</span>
-          <div class="badge">
-          <p data-testid="test-todo-due-date" id="dueDate">Due: Apr 16, 2026</p>
-          <p data-testid="test-todo-time-remaining" id="timeRemaining">Due in 1 week</p>
-          <p data-testid="test-todo-status">In progress..</p>
-        </div>
-          <div data-testid="test-todo-tags" class="tags">
-            <span class="tag" data-testid="test-todo-tag-work">Work</span>
-            <span class="tag" data-testid="test-todo-tag-urgent">Urgent</span>
-          </div>
-          <div class="buttons" data-testid="test-todo-button">
-            <button class="edit" data-testid="test-todo-edit-button">Edit</button>
-            <button class="delete" data-testid="test-todo-delete-button">Delete</button>
-        </div>
-          </section>
+  
 
+<div class="card">
 
-    <script src="todo.js"></script>
+  <!-- STATUS + CHECKBOX -->
+  <input type="checkbox" id="checkbox"/>
+
+  <select data-testid="test-todo-status-control" id="statusControl">
+    <option>Pending</option>
+    <option>In Progress</option>
+    <option>Done</option>
+  </select>
+
+  <span id="Status">Pending</span>
+
+  <!-- TITLE -->
+  <h2 data-testid="test-todo-title">Finish My Project</h2>
+
+  <!-- DESCRIPTION -->
+  <div 
+    id="descSection" 
+    class="collapsed" 
+    data-testid="test-todo-collapsible-section"
+  >
+    <p data-testid="test-todo-description" id="descText">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio eveniet vel molestias cum debitis, repellat possimus! Deleniti, ratione. Quis error fuga neque, excepturi obcaecati rem sit nobis porro consequatur odio!
+    </p>
+  </div>
+
+  <button 
+    data-testid="test-todo-expand-toggle"
+    aria-expanded="false"
+    aria-controls="descSection"
+  >
+    Show more
+  </button>
+
+  <!-- PRIORITY -->
+  <p data-testid="test-todo-priority">Medium</p>
+
+  <!-- PRIORITY INDICATOR -->
+  <div data-testid="test-todo-priority-indicator"></div>
+
+  <!-- TIME -->
+  <p id="dueDate" data-testid="test-todo-due-date"></p>
+  <p id="timeRemaining" aria-live="polite"></p>
+  <p data-testid="test-todo-overdue-indicator" class="hidden"></p>
+
+  <!-- EDIT BUTTON -->
+  <button data-testid="test-todo-edit-button" id="editBtn">Edit</button>
+
+  <!-- EDIT FORM -->
+  <div id="editForm" class="hidden" data-testid="test-todo-edit-form">
+
+    <label for="editTitle">Title</label>
+    <input id="editTitle" data-testid="test-todo-edit-title-input" />
+<br>
+    <label for="editDesc">Description</label>
+    <textarea id="editDesc" data-testid="test-todo-edit-description-input"></textarea>
+<br>
+    <label for="editPriority">Priority</label>
+    <select id="editPriority" data-testid="test-todo-edit-priority-select">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+<br>
+    <label for="editDate">Due Date</label>
+    <input type="datetime-local" id="editDate" data-testid="test-todo-edit-due-date-input"/>
+<br>
+<div class="buttons" data-testid="test-todo-button">
+    <button id="saveBtn" data-testid="test-todo-save-button">Save</button>
+    <button id="cancelBtn" data-testid="test-todo-cancel-button">Cancel</button>
+  </div>
+  </div>
+
+</div>
+<script src="todo.js"></script>
 </body>
 </html>
+
